@@ -131,15 +131,15 @@ public class test {
             Thread.sleep(3000);
 
             //zrób screena
-            File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            /*try {
-                // now copy the  screenshot to desired location using copyFile //method
-                FileUtils.copyFile(src, new File("C:/selenium/error.png"));
+            TakesScreenshot ts=(TakesScreenshot)driver;
+
+            try {
+                FileHandler.copy(ts.getScreenshotAs(OutputType.FILE), new File("src/main/resources/screens/screenshot.png"));
+            } catch (WebDriverException e) {
+
+            } catch (IOException e) {
+
             }
-            catch (IOException e)
-            {
-                System.out.println(e.getMessage());
-            } */
 
 
         } else {
