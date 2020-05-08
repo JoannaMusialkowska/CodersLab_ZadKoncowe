@@ -131,14 +131,22 @@ public class test {
             Thread.sleep(3000);
 
             //zrób screena
+            File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+            /*try {
+                // now copy the  screenshot to desired location using copyFile //method
+                FileUtils.copyFile(src, new File("C:/selenium/error.png"));
+            }
+            catch (IOException e)
+            {
+                System.out.println(e.getMessage());
+            } */
 
 
         } else {
             System.out.println("Nie ma już promki na sweterek. Koniec zakupów");
         }
 
-        //WebDriver augmentedDriver = new Augmenter().augment(driver);
-        //File screenshot = ((TakesScreenshot)augmentedDriver).getScreenshotAs(OutputType.FILE);
+
 
 
     }
